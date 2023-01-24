@@ -37,7 +37,7 @@ function App() {
   return (
     <div>
       <form>
-        <label>Search for a Nepo Baby:</label>
+        <label>Search for a K drama star:</label>
         <input
         type="text"
         id="search"
@@ -56,6 +56,12 @@ function App() {
             <h2>{result.name}</h2>
             <p>{result.min_height}</p>
             <p>Nepo baby Net worth: {result.net_worth}</p>
+            <ul>
+              {result.occupation.map(item => (
+                <li>{item}</li>
+              ))}
+            </ul>
+      
             </div> 
        
         ))
