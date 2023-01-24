@@ -17,7 +17,7 @@ function App() {
           {
             headers: 
             {
-              'X-Api-Key': '8kHbzjXIx8LS+/2+Q6kw0g==tawcyCUxTv50Cb6h'
+              'X-Api-Key': process.env.REACT_APP_API_KEY
             }
           }
         );
