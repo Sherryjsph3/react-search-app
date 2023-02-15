@@ -6,6 +6,7 @@ import Gin from '../images/Pink-gin.webp';
 import {useState} from 'react';
 
 
+
 function Modals() {
 
   const [show, setShow] = useState(false);
@@ -30,7 +31,10 @@ function Modals() {
   
 return(
 <>
-<div>
+
+
+<div className='drinks '> 
+
     <img 
         src={Martini}
         alt="apple martini" 
@@ -49,6 +53,8 @@ return(
         className="drink gin"
         onClick={handleShowGin}
     />
+
+   
 </div>
     <Modal show={show} onHide={handleClose}> 
         <Modal.Header closeButton>
