@@ -1,6 +1,11 @@
 
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Modals from './components/Modals';
 import { useState, useEffect } from 'react';
+
+
+
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -8,12 +13,14 @@ function App() {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+
+
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
         const res = await fetch(
-          `https://api.api-ninjas.com/v1/celebrity?name=${searchTerm}`,
+          `https://api.api-ninjas.com/v1/cocktail?name=${searchTerm}`,
           {
             headers: 
             {
@@ -35,9 +42,10 @@ function App() {
   }, [searchTerm])
 
   return (
-    <div>
+    <>
+    <div className="App">
       <form>
-        <label>Search for a K drama star:</label>
+        <label>Explore Different Cocktails:</label>
         <input
         type="text"
         id="search"
@@ -53,20 +61,23 @@ function App() {
         searchResults.map(result => (
       
             <div key={result.id}>
-            <h2>{result.name}</h2>
-            <p>{result.min_height}</p>
-            <p>Nepo baby Net worth: {result.net_worth}</p>
-            <ul>
-              {result.occupation.map(item => (
-                <li>{item}</li>
-              ))}
-            </ul>
+              <h2>{result.name}</h2>
+              <p>{result.instructions}</p>
+              <ul>
+                {result.ingredients.map(item => (
+                  <li>{item}</li>
+                ))}
+              </ul>
       
             </div> 
        
         ))
       )}
+          
     </div>
+    
+    <Modals />
+    </>
   );
 }
 
