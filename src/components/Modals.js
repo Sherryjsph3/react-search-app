@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
+import { Stars } from 'react-bootstrap-icons';
 import Martini from '../images/Apple-Martini.jpeg';
 import Whiskey from '../images/whiskey-sour.jpeg';
 import Gin from '../images/Pink-gin.webp';
@@ -70,7 +71,7 @@ return(
                     <li>31.5 cl (1 part) Apple schnapps / Calvados</li>
                     <li>1.5 cl (1 part) Cointreau</li>
                 </ul>
-    
+                <Stars />
             </div> 
         </Modal.Body>
         <Modal.Footer>
@@ -93,7 +94,7 @@ return(
                     <li>3 cl (2 parts) fresh lemon juice</li>
                     <li>1.5 cl (1 part) simple syrup</li>
                 </ul>
-    
+                <Stars />
             </div> 
         </Modal.Body>
         <Modal.Footer>
@@ -116,7 +117,7 @@ return(
                     <li>One Part Water</li>
                     <li>Dash of Angostura Bitters (adjust to taste)</li>
                 </ul>
-    
+                <Stars />
             </div> 
         </Modal.Body>
         <Modal.Footer>
