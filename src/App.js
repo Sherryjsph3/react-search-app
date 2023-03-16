@@ -8,11 +8,18 @@ import CocktailSearch from './components/CocktailSearch';
 
 function App() {
 
- 
+  
   return (
     <>
-    <CocktailSearch />
-    <Modals />
+    <div className="header" >
+      <p className="headerText">Shake It Up</p>
+    </div>
+    <div className='content'>
+      <CocktailSearch />
+    </div>
+    
+      <Modals />
+ 
     </>
   );
 }

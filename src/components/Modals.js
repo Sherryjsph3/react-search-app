@@ -33,7 +33,7 @@ function Modals() {
 return(
 <>
 
-
+<footer>
 <div className='drinks '> 
 
     <img 
@@ -57,6 +57,7 @@ return(
 
    
 </div>
+</footer>
     <Modal show={show} onHide={handleClose}> 
         <Modal.Header closeButton>
             <Modal.Title>Apple Martini</Modal.Title>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import ShoppingList from './ShoppingList';
 
 function CocktailSearch() {
 
@@ -47,7 +47,7 @@ function CocktailSearch() {
 return (
  
     <>
-<div> 
+<div style={{display: "flex", width: "900px"}}> 
 
   <div className='container' style={containerStyle ? { height: "605px"} : {height: "105px"}} >
     <div className='search-box'>
@@ -74,7 +74,7 @@ return (
            
               <h3>{result.name}</h3>
               <p>{result.instructions}</p>
-              <ul>
+              <ul className='cocktail-list'>
                 {result.ingredients.map(item => (
                   <li>{item}</li>
                 ))}
@@ -84,6 +84,7 @@ return (
         ))
       )}
   </div>
+  <ShoppingList />                  
 </div>
     </>
 )
